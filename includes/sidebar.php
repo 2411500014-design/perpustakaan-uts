@@ -19,15 +19,15 @@
                         <a class="nav-link" href="layout-sidenav-light.html">Tambah Buku</a>
                     </nav>
                 </div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                <a class="nav-link <?php echo ($page == "daftar-kategori" || $page == "tambah-kategori" || $page == "edit-kategori") ? "active" : "collapsed"; ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                     <div class="sb-nav-link-icon"><i class="fas fa-folder-open"></i></div>
                     Kategori
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapsePages" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <div class="collapse <?php echo ($page == "daftar-kategori" || $page == "tambah-kategori" || $page == "edit-kategori") ? "show" : ""; ?>" id="collapsePages" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="layout-static.html">Daftar Kategori</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Tambah Kategori</a>
+                        <a class="nav-link <?php echo ($page == "daftar_kategori") ? 'active' : ''; ?>" href="index.php?hal=daftar_kategori">Daftar Kategori</a>
+                        <a class="nav-link <?php echo ($page == "tambah_kategori") ? 'active' : ''; ?>" href="index.php?hal=tambah_kategori">Tambah Kategori</a>
                     </nav>
                 </div>
 
