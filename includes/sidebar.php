@@ -13,12 +13,17 @@
                     Data Buku
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="layout-static.html">Daftar Buku</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Tambah Buku</a>
-                    </nav>
-                </div>
+            <a class="nav-link <?php echo ($page == "daftar_buku" || $page == "tambah_buku" || $page == "ubah_buku") ? "active" : "collapsed" ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                Data Buku
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse <?php echo ($page == "daftar_buku" || $page == "tambah_buku" || $page == "ubah_buku") ? "show" : "" ?>" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link <?php echo ($page == "daftar_buku") ? 'active' : ''; ?>" href="index.php?hal=daftar_buku">Daftar Buku</a>
+                    <a class="nav-link <?php echo ($page == "tambah_buku") ? 'active' : ''; ?>" href="index.php?hal=tambah_buku">Tambah Buku</a>
+                </nav>
+            </div>
                 <a class="nav-link <?php echo ($page == "daftar-kategori" || $page == "tambah-kategori" || $page == "edit-kategori") ? "active" : "collapsed"; ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                     <div class="sb-nav-link-icon"><i class="fas fa-folder-open"></i></div>
                     Kategori
