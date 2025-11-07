@@ -57,7 +57,7 @@ if ($result_kategori) {
                             <td>
                                 <div class="d-flex align-items-center">
                                     <?php if (!empty($row['cover_buku'])) : ?>
-                                        <img src="uploads/<?= $row['cover_buku'] ?>" alt="Cover Buku" width="50" height="70" style="object-fit: cover; border-radius: 5px; margin-right: 10px;" />
+                                        <img src="uploads/buku/<?= $row['cover_buku'] ?>" alt="Cover Buku" width="50" height="70" style="object-fit: cover; border-radius: 5px; margin-right: 10px;" />
                                     <?php else : ?>
                                         <div style="width: 50px; height:70px; background:#ddd; border-radius:5px; margin-right:10px; display:flex; align-items:center; justify-content: center; color: #999;">No Cover</div>
                                     <?php endif ?>
