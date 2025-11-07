@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="mb-3">
                     <label for="cover" class="form-label">Cover Buku</label><br>
                     <?php if (!empty($buku['cover_buku'])) : ?>
-                        <img src="uploads/<?= $buku['cover_buku'] ?>" alt="Cover Buku" width="100" style="margin-bottom:10px;"><br>
+                        <img src="uploads/buku/<?= $buku['cover_buku'] ?>" alt="Cover Buku" width="100" style="margin-bottom:10px;"><br>
                     <?php endif ?>
                     <input type="file" name="cover" class="form-control" id="cover">
                 </div>
