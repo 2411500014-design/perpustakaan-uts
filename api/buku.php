@@ -6,9 +6,9 @@ function response($status, $msg, $data = null)
 {
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode([
-        "status"  => $status,
+        "status" => $status,
         "message" => $msg,
-        "data"    => $data
+        "data" => $data
     ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     exit;
 }
@@ -38,15 +38,15 @@ if (isset($_GET['id'])) {
     }
 
     $data = [
-        "id_buku"      => $buku['id_buku'],
-        "judul"        => $buku['judul'],
-        "penulis"      => $buku['penulis'],
-        "penerbit"     => $buku['penerbit'],
+        "id_buku" => $buku['id_buku'],
+        "judul" => $buku['judul'],
+        "penulis" => $buku['penulis'],
+        "penerbit" => $buku['penerbit'],
         "tahun_terbit" => $buku['tahun_terbit'],
-        "stok"         => $buku['stok'],
-        "kategori"     => $kategori,
-        "cover_buku"   => $buku['cover_buku'] 
-            ? "http://localhost/perpustakaan-uts/uploads/buku/" . $buku['cover_buku'] 
+        "stok" => $buku['stok'],
+        "kategori" => $kategori,
+        "cover_buku" => $buku['cover_buku']
+            ? "http://10.183.208.63/perpustakaan-uts/uploads/buku/" . $buku['cover_buku']
             : null
     ];
 
@@ -58,14 +58,14 @@ if (isset($_GET['id'])) {
 
     while ($buku = $result->fetch_assoc()) {
         $list[] = [
-            "id_buku"      => $buku['id_buku'],
-            "judul"        => $buku['judul'],
-            "penulis"      => $buku['penulis'],
-            "penerbit"     => $buku['penerbit'],
+            "id_buku" => $buku['id_buku'],
+            "judul" => $buku['judul'],
+            "penulis" => $buku['penulis'],
+            "penerbit" => $buku['penerbit'],
             "tahun_terbit" => $buku['tahun_terbit'],
-            "stok"         => $buku['stok'],
-            "cover_buku"   => $buku['cover_buku'] 
-                ? "http://localhost/perpustakaan-uts/uploads/buku/" . $buku['cover_buku'] 
+            "stok" => $buku['stok'],
+            "cover_buku" => $buku['cover_buku']
+                ? "http://10.183.208.63/perpustakaan-uts/uploads/buku/" . $buku['cover_buku']
                 : null
         ];
     }
